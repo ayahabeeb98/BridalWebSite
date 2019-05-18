@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('master');
+    return view('home.signUp');
 });
+
+
 
 
 //Route::get('create', 'BookController@create');
