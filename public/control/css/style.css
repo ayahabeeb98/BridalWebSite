@@ -104,10 +104,10 @@ nav ul li a{
 }
 .testimonial-card .card-up {
     overflow: hidden;
-    height: 120px;
+    height: 135px;
 }
 .blue-gradient {
-    background: linear-gradient(40deg,#a29f9f,#E73D89)!important;
+    background: radial-gradient(#fff,#FFBFE6)!important;
 }
 
 .Testimonials .p1{

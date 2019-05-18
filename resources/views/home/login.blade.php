@@ -10,7 +10,7 @@
             <div class="card card-3">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Registration Info</h2>
+                    <h2 class="title">Log In</h2>
                     <form method="POST" class="signupform">
                         <div class="input-group">
                             <input class="input--style-3" type="text" placeholder="Name" name="name">
@@ -19,18 +19,7 @@
                             <input class="input--style-3 " type="text" placeholder="Password" name="password">
                             <!--                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>-->
                         </div>
-                        <div class="input-group">
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <input class="input--style-3" type="text" placeholder="Bank Account" name="bank">
 
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-3" type="email" placeholder="Email" name="email">
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
-                        </div>
                         <div class="p-t-10">
                             <button class="btn btn--pill btn--green signupbutton" type="submit">Submit</button>
                         </div>
@@ -40,4 +29,4 @@
         </div>
     </div>
 
-    @endsection
+@endsection

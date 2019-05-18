@@ -76,7 +76,7 @@
     <section class="booking">
         <!-- <div class="container"> -->
         <p class="p text-center mb-0">The Most Booking</p>
-        <img src="img/line.png" alt="" class="mx-auto d-block mb-2">
+        <img src="{{asset('control/img/line.png')}}" alt="" class="mx-auto d-block mb-2">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner container">
                 <div class="carousel-item active">
@@ -259,7 +259,7 @@
                         </div>
                         <!--Avatar-->
                         <div class="avatar mx-auto">
-                            <img src="{{asset('/control/img/testimonial_3.png')}}" class="rounded-circle img-fluid">
+                            <img src="{{asset('/control/img/testimonial_1.png')}}" class="rounded-circle img-fluid">
                         </div>
                         <div class="card-body">
                             <!--Name-->

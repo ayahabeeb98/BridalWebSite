@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-color: #DBBEBE;">
+<div class="container-fluid" style="background-color: #828282;">
     <div class="row">
         <div class="col-4"></div>
         <div class="col-4 text-center">
@@ -20,9 +20,9 @@
         <div class="col-3">Terms of use</div>
         <div class="col-3">Privacy policy</div>
         <div class="col-3">
-            <img class="social" id="insta" src="img/1.png">
-            <img  class="social" src="img/2.png">
-            <img   class="social" src="img/4.png">
+            <i class="fab fa-facebook-square fa-2x mx-2"></i>
+            <i class="fab fa-twitter-square fa-2x mx-2"></i>
+            <i class="fab fa-facebook-square fa-2x mx-2"></i>
 
         </div>
         <div class="col-3">Copyright © 2019 . All Rights Reserved.</div>

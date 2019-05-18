@@ -13,6 +13,7 @@
 
 </head>
 
+@yield('style')
 
 <body>
 
