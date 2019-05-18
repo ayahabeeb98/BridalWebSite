@@ -1,0 +1,192 @@
+body{
+    font-family: "Segoe UI";
+    font-size: 20px;
+}
+
+
+header{
+    background-color: rgba(255, 255, 255,0.6);
+
+    /*background-image: url("img/");*/
+
+}
+.signUp{
+    background-color: #E73D89;
+    border-radius: 15px;
+    width: 100px;
+    border-color:#E73D89;
+
+}
+
+.banner{
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 880px;
+}
+
+nav ul li{
+      margin:0px 15px ;
+
+}
+nav ul li a{
+    color: white;
+
+}
+
+.steps{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.steps .step{
+    font-size: 15px;
+    background-color:#f5f5f5;
+    height: 150px;
+    padding-top: 60px;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 50px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.steps .icon{
+    color:white;
+    /*position: relative;*/
+}
+
+.steps .bgIcon{
+    width: 50px;
+    height: 50px;
+    background-color: #E73D89;
+    border-radius: 50px;
+    padding-top: 10px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 125px;
+
+}
+
+.categories{
+    margin-top: 70px;
+    background-color: #fbf4f8;
+}
+
+.categories .cat3{
+    position: absolute;
+    margin-top: -335px;
+    margin-left: 355px;
+
+}
+
+.categories img{
+    border-radius: 10px;
+    margin-bottom: 55px;
+}
+
+.categories .p, .booking .p{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    color: #E73D89;
+    font-size: 2rem;
+    font-weight: 700!important;
+}
+
+.testimonial-card .avatar {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 120px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 5px solid #fff;
+
+}
+.testimonial-card .card-up {
+    overflow: hidden;
+    height: 120px;
+}
+.blue-gradient {
+    background: linear-gradient(40deg,#a29f9f,#E73D89)!important;
+}
+
+.Testimonials .p1{
+    color: #828282;
+
+}
+
+.fa-map-marker-alt , .fa-info-circle {
+    background: linear-gradient(to top,#F8C7C7 , #E8428C);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+.room {
+    margin-left: 55px;
+    margin-bottom: 1rem;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    bottom: -73px;
+    opacity: 1;
+    width: 10%;
+}
+
+.fa-star {
+    color: #EDC211;
+    opacity: 0.7;
+}
+
+.details-btn {
+    background:#DF6898;
+    border: none;
+    
+}
+
+.details-btn:hover, .details-btn:focus {
+    background-color: #E8428C;
+}
+
+.carousel-item span{
+    color: #756169;
+}
+
+/*.carousel-control-next {
+    right: -30px;
+}
+
+.carousel-control-prev {
+    left: -30px;
+}*/
+.slide-icon {
+    font-weight: 900;
+    color: #DF6898;
+}
+
+.slide-icon:hover {
+    color: #D6558F;
+}
+
+
+.halls h2 {
+    color: #E73D89;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 35px;
+}
+
+@media (max-width: 991px) {
+.booking .card {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .booking .card {
+        margin-bottom: 20px;
+    }
+}
