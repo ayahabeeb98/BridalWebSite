@@ -1,9 +1,105 @@
+
+/* ==========================================================================
+   #FONT
+   ========================================================================== */
+/*.font-robo {*/
+/*  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;*/
+/*}*/
+
+/*.font-poppins {*/
+/*  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;*/
+/*}*/
+
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+/*.row {*/
+/*  display: -webkit-box;*/
+/*  display: -webkit-flex;*/
+/*  display: -moz-box;*/
+/*  display: -ms-flexbox;*/
+/*  display: flex;*/
+/*  -webkit-flex-wrap: wrap;*/
+/*  -ms-flex-wrap: wrap;*/
+/*  flex-wrap: wrap;*/
+/*}*/
+
+/*.row-space {*/
+/*  -webkit-box-pack: justify;*/
+/*  -webkit-justify-content: space-between;*/
+/*  -moz-box-pack: justify;*/
+/*  -ms-flex-pack: justify;*/
+/*  justify-content: space-between;*/
+/*}*/
+
+/*.col-2 {*/
+/*  width: -webkit-calc((100% - 60px) / 2);*/
+/*  width: -moz-calc((100% - 60px) / 2);*/
+/*  width: calc((100% - 60px) / 2);*/
+/*}*/
+
+/*@media (max-width: 767px) {*/
+/*  .col-2 {*/
+/*    width: 100%;*/
+/*  }*/
+/*}*/
+
+/* ==========================================================================
+   #BOX-SIZING
+   ========================================================================== */
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+/*html {*/
+/*  -webkit-box-sizing: border-box;*/
+/*  -moz-box-sizing: border-box;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/** {*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*}*/
+
+/**, *:before, *:after {*/
+/*  -webkit-box-sizing: inherit;*/
+/*  -moz-box-sizing: inherit;*/
+/*  box-sizing: inherit;*/
+/*}*/
+
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
+/**
+ * A very simple reset that sits on top of Normalize.css.
+ */
 body
  {
   margin: 0;
   padding: 0;
 }
 
+/*!***/
+/* * Remove trailing margins from nested lists.*/
+/* *!*/
+/*li > ol,*/
+/*li > ul {*/
+/*  margin-bottom: 0;*/
+/*}*/
+
+/*!***/
+/* * Remove default table spacing.*/
+/* *!*/
+/*table {*/
+/*  border-collapse: collapse;*/
+/*  border-spacing: 0;*/
+/*}*/
+
+/**
+ * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ *    on fieldsets.
+ */
  fieldset {
   min-width: 0;
   /* [1] */
@@ -16,18 +112,63 @@ body
   border: none;
 }
 
+/* ==========================================================================
+   #PAGE WRAPPER
+   ========================================================================== */
+/*.page-wrapper {*/
+/*  min-height: 100vh;*/
+/*}*/
+
 body {
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  /*font-size: 14px;*/
 }
+/*h1, h2, h3, h4, h5, h6 {*/
+/*  font-weight: 400;*/
+/*}*/
+
+/*h1 {*/
+/*  font-size: 36px;*/
+/*}*/
+
+/*h2 {*/
+/*  font-size: 30px;*/
+/*}*/
+
+/*h3 {*/
+/*  font-size: 24px;*/
+/*}*/
+
+/*h4 {*/
+/*  font-size: 18px;*/
+/*}*/
+
+/*h5 {*/
+/*  font-size: 15px;*/
+/*}*/
+
+/*h6 {*/
+/*  font-size: 13px;*/
+/*}*/
+
+/* ==========================================================================
+   #BACKGROUND
+   ========================================================================== */
+/*.bg-blue {*/
+/*  background: #2c6ed5;*/
+/*}*/
+
+/*.bg-red {*/
+/*  background: #fa4251;*/
+/*}*/
 
 .bg-gra-01 {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#E73D89));
-  background: -webkit-linear-gradient(to top, #ffffff 120%, #E73D89 100%);
-  background: -moz-linear-gradient(to top, #ffffff 20%, #E73D89 100%);
-  background: -o-linear-gradient(to top, #ffffff 20%, #E73D89 100%);
-  background: linear-gradient(to top, #ffffff 20%, #E73D89 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#a29f9f), to(#E73D89));
+  background: -webkit-linear-gradient(bottom, #a29f9f 120%, #E73D89 100%);
+  background: -moz-linear-gradient(bottom, #a29f9f 20%, #E73D89 100%);
+  background: -o-linear-gradient(bottom, #a29f9f 20%, #E73D89 100%);
+  background: linear-gradient(to top right, #a29f9f 20%, #E73D89 100%);
 }
 
 /* ==========================================================================
@@ -221,6 +362,8 @@ body {
 
 .signup .card-3 .card-heading {
   background: url("../img/signupimg.jpg") top left/cover no-repeat;
+
+
   display: table-cell;
   width: 50%;
 }
