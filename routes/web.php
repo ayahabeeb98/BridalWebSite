@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home.signup');
+    return view('home.login');
 });
 
 

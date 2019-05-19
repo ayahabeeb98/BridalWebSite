@@ -350,9 +350,9 @@ body {
 
 .signup .card-3 {
   background: #f5f5f5;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius:0px 100px;
+  -moz-border-radius: 0px 100px;
+  border-radius: 0px 100px;
   -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
