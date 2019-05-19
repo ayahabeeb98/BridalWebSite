@@ -1,12 +1,24 @@
 @extends('master')
 
+@section('style')
+    <style>
+        .Testimonials .card {
+            box-shadow: 5px 5px 5px #dad2d2;
+        }
+
+
+        .Testimonials .p {
+            padding-top: 35px;
+        }
+    </style>
+@endsection
 @section('body')
     <!--======================================= steps Section =========================================== -->
     <section class="steps">
         <div class="container">
             <div class="row m-auto">
                 <div class="col-lg-12 " align="center">
-                    <p> we will plan the wedding of your dreams</p>
+                    <p class="p"> we will plan the wedding of your dreams</p>
                     <img src="{{asset('/control/img/1.png')}}">
 
                     <p>Organizing a wedding always starts
@@ -34,8 +46,7 @@
         <div class="container">
             <div class="row  m-auto ">
                 <div class="col-lg-12" align="center">
-                    <p class="p mb-0">Categories Of Wedding Halls</p>
-                    <img src="{{asset('/control/img/line.png')}}" alt="" class="mx-auto d-block mb-2">
+                    <p class="p">Categories Of Wedding Halls</p>
 
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -73,10 +84,9 @@
 
     <!--======================================= Most booking Section =========================================== -->
 
-    <section class="booking">
+    <section class="booking mb-5">
         <!-- <div class="container"> -->
-        <p class="p text-center mb-0">The Most Booking</p>
-        <img src="{{asset('control/img/line.png')}}" alt="" class="mx-auto d-block mb-2">
+        <p class="p text-center">The Most Booking</p>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner container">
                 <div class="carousel-item active">
@@ -197,9 +207,9 @@
     </section>
     <!--======================================= Testimonials Section =========================================== -->
     <!-- Section: Testimonials v.1 -->
-    <section class="text-center my-5 p-1 Testimonials">
+    <section class="text-center pb-5  Testimonials">
         <!-- Section heading -->
-        <h2 class="h1-responsive font-weight-bold my-5 p1">Testimonials</h2>
+        <p class="p text-center">Testimonials</p>
         <!-- Grid row -->
         <div class="container">
             <div class="row m-auto">
