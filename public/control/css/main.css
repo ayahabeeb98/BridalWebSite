@@ -23,11 +23,11 @@ body {
 }
 
 .bg-gra-01 {
-  background: -webkit-gradient(linear, left bottom, left top, from(#a29f9f), to(#E73D89));
-  background: -webkit-linear-gradient(to top, #a29f9f 120%, #E73D89 100%);
-  background: -moz-linear-gradient(to top, #a29f9f 20%, #E73D89 100%);
-  background: -o-linear-gradient(to top, #a29f9f 20%, #E73D89 100%);
-  background: linear-gradient(to top, #a29f9f 20%, #E73D89 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#E73D89));
+  background: -webkit-linear-gradient(to top, #ffffff 120%, #E73D89 100%);
+  background: -moz-linear-gradient(to top, #ffffff 20%, #E73D89 100%);
+  background: -o-linear-gradient(to top, #ffffff 20%, #E73D89 100%);
+  background: linear-gradient(to top, #ffffff 20%, #E73D89 100%);
 }
 
 /* ==========================================================================

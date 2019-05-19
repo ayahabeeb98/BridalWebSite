@@ -1,6 +1,6 @@
 body{
     font-family: "Segoe UI";
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
@@ -91,6 +91,11 @@ nav ul li a{
     color: #E73D89;
     font-size: 2rem;
     font-weight: 700!important;
+}
+
+.small, small{
+    font-size: 16px;
+
 }
 
 .testimonial-card .avatar {
