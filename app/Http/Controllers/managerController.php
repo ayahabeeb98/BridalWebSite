@@ -39,7 +39,7 @@ class managerController extends Controller
      */
     public function store(Request $request)
     {
-//        $request->validate($this->rules(), $this->messages());
+        $request->validate($this->rules(), $this->messages());
         $image = $request->file('image');
         $imageName = time() . '.' . $image->getClientOriginalExtension();
         $direction = public_path('image/');
@@ -100,7 +100,7 @@ class managerController extends Controller
             return redirect()->route('hall.create')
                 ->with('error', 'Hall is not found');
         }
-//        $request->validate($this->rules($hall->id), $this->messages());
+        $request->validate($this->rules($hall->id), $this->messages());
 
         $hall->fill($request->all());
         $hall->category_id = intval($request->category_id);
@@ -125,6 +125,41 @@ class managerController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    private
+    function rules($id = null)
+    {
+        $rules = [
+            'name' => 'required',
+            'rooms_num' => 'required',
+            'category_id' => 'required',
+
+        ];
+        if ($id) {
+            $rules['image'] = 'mimes:jpeg,bmp,png,jpg';
+        } else {
+            $rules['image'] = 'required|mimes:jpeg,bmp,png,jpg';
+        }
+        return $rules;
+    }
+
+    /**
+     *
+     * validation messages
+     *
+     * @return array
+     */
+    private
+    function messages()
+    {
+        return [
+            'name.required' => 'Name is required',
+            'rooms_num.required' => 'Number of room  is required',
+            'image.required' => 'Hall image is required',
+            'image.mimes' => 'invalid image',
+        ];
     }
 
 

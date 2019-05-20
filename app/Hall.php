@@ -28,4 +28,11 @@ class Hall extends Model
         return $this->belongsTo('App\Category');
     }
 
+    public function getImage()
+    {
+        if (!$this->image)
+            return asset('no_image.png');
+        return asset($this->image);
+    }
+
 }

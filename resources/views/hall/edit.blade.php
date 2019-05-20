@@ -15,14 +15,21 @@
         <div class="form-group col-md-6">
             <label for="inputEmail4">Name</label>
             <input type="text" class="form-control" id="inputEmail4" placeholder="Hall name" name="name" value="{{$hall->name}}">
+            <span class="error col-md-12">{{$errors->first('name')}}</span>
+
         </div>
         <div class="form-group col-md-6">
             <label for="inputPassword4">Number of rooms</label>
             <input type="number" min="0" max="10" class="form-control" id="inputPassword4" placeholder="Number of rooms" name="rooms_num" value="{{$hall->rooms_num}}">
+            <span class="error col-md-12">{{$errors->first('rooms_num')}}</span>
+
         </div>
         <div class="form-group col-md-6">
+            <img src="{{asset($hall->getImage())}}" alt="">
             <label for="image">Image</label>
-            <input type="file" class="form-control" id="inputEmail4" placeholder="Image" name="image">
+            <input type="file" class="form-control" id="inputEmail4" placeholder="Image" name="image" >
+            <span class="error col-md-12">{{$errors->first('image')}}</span>
+
         </div>
 
 
