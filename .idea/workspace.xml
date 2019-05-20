@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf11356c-0fa8-4c8f-b58e-bef9a73fbff9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/managerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/managerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/hall/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hall/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,6 +29,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/hall/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,8 +50,8 @@
       <file leaf-file-name="managerController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/managerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="109" column="24" lean-forward="true" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+            <state relative-caret-position="102">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
               </folding>
@@ -120,9 +130,9 @@
         <option value="$PROJECT_DIR$/app/Hall.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_02_130654_create_halls_table.php" />
         <option value="$PROJECT_DIR$/resources/views/hall/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/hall/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/hall/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/managerController.php" />
       </list>
     </option>
@@ -247,29 +257,6 @@
             <path>
               <item name="BridalWebSite" type="b2602c69:ProjectViewProjectNode" />
               <item name="BridalWebSite" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BridalWebSite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BridalWebSite" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BridalWebSite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BridalWebSite" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BridalWebSite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BridalWebSite" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BridalWebSite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BridalWebSite" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -360,12 +347,12 @@
       <workItem from="1558201196096" duration="6557000" />
       <workItem from="1558214061350" duration="2426000" />
       <workItem from="1558248947170" duration="10339000" />
-      <workItem from="1558337715661" duration="9120000" />
+      <workItem from="1558337715661" duration="9967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47216000" />
+    <option name="totallyTimeSpent" value="48063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -377,8 +364,8 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.39438945" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79019076" visible="true" weight="0.3161876" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.39438945" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79019076" visible="true" weight="0.3161876" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.20980926" side_tool="true" visible="true" weight="0.3161876" />
@@ -644,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/hall/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="34" column="68" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -693,10 +673,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/hall/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/managerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="109" column="24" lean-forward="true" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+        <state relative-caret-position="102">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>

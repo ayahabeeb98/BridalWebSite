@@ -30,9 +30,9 @@
             <label for="category">Category</label>
             <select id="category" class="form-control" name="category_id">
                 <option value="1" {{$hall->category_id == intval("1") ?'selected' :''}}>Gaza</option>
-                <option value="2" {{$hall->category_id === intval("2") ?'selected' :''}}>North Gaza</option>
-                <option value="3" {{$hall->category_id === intval("3") ?'selected' :''}}>South Gaza</option>
-                <option value="4" {{$hall->category_id === intval("4") ?'selected' :''}}>Central</option>
+                <option value="2" {{$hall->category_id == intval("2") ?'selected' :''}}>North Gaza</option>
+                <option value="3" {{$hall->category_id == intval("3") ?'selected' :''}}>South Gaza</option>
+                <option value="4" {{$hall->category_id == intval("4") ?'selected' :''}}>Central</option>
             </select>
         </div>
 

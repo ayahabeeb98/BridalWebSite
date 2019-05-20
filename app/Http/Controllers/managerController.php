@@ -46,8 +46,10 @@ class managerController extends Controller
         $image->move($direction, $imageName);
         $hall = new Hall();
         $hall->image = "image/" . $imageName;
-        $hall->category_id = '3';
         $hall->manager_id ='1';
+//        dd(intval($request->category_id));
+        $hall->category_id = intval($request->category_id);
+
 //        $hall->manager_id = Auth::user()->id;
         $hall->fill($request->all());
         $hall->save();
@@ -106,7 +108,10 @@ class managerController extends Controller
             }
             $hall->image = parent::uploadImage($request->file('image'));
         }
+        $hall->category_id = intval($request->category_id);
+
         $hall->fill($request->all());
+
         $hall->update();
         return redirect()->route('hall.create')
             ->with('success', 'hall ' . $hall->name . 'Hall has been updated successfully');
