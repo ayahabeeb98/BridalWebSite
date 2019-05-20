@@ -109,7 +109,7 @@ class managerController extends Controller
         $hall->fill($request->all());
         $hall->update();
         return redirect()->route('hall.create')
-            ->with('success', 'book ' . $hall->name . ' has been updated successfully');
+            ->with('success', 'hall ' . $hall->name . 'Hall has been updated successfully');
     }
 
     /**
