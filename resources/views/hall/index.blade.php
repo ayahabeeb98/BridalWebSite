@@ -38,6 +38,19 @@
                 margin-bottom: 20px;
             }
         }
+
+        .banner {
+            background-image: none;
+            min-height: 0;
+        }
+
+        header {
+            background-image: linear-gradient(to left, rgba(0,0,0,0.5) ,rgba(0,0,0,0.4) ,  rgba(0,0,0,0.5));
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #fff;
+        }
     </style>
 
 @endsection
@@ -48,7 +61,7 @@
             <div class="row mt-5">
                 <div class="col-lg-12 text-center">
                     <h2>Gaza Government Wedding Halls</h2>
-                    <img src="{{asset('control/img/line.png')}}" alt="" class="mx-auto d-block mb-2">
+                    {{--<img src="{{asset('control/img/line.png')}}" alt="" class="mx-auto d-block mb-2">--}}
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card">

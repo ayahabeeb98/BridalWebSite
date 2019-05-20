@@ -27,7 +27,16 @@ header{
     font-size: 20px;
     /*min-height: 880px;*/
 }
+.social {
+    color:#fff;
+}
 
+.social:visited {
+    color: #756169;
+}
+.social:hover {
+    color:#E73D89 ;
+}
 nav ul li{
       margin:0px 15px ;
 
