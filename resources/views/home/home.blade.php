@@ -10,6 +10,78 @@
         .Testimonials .p {
             padding-top: 35px;
         }
+
+.img-fluid {
+opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.text {
+  background-color: #ca747a;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.middlesouth{
+transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.middlecenter{
+    transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.portfolio-wrap:hover .img-fluid {
+  opacity: 0.3;
+}
+
+.portfolio-wrap:hover .middle {
+  opacity: 1;
+}
+.portfolio-wrap:hover .middlesouth {
+  opacity: 1;
+}
+.portfolio-wrap:hover .middlecenter {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+        .middlesouth {
+            transform: translate(-50%, -500%);
+            -ms-transform: translate(-50%, -500%);
+        }
+        .middlecenter{
+            transform: translate(-50%, 300%);
+            -ms-transform: translate(-50%, 300%);
+        }
+    }
     </style>
 @endsection
 @section('body')
@@ -41,36 +113,54 @@
             </div>
         </div>
     </section>
-    <!--======================================= categories Section =========================================== -->
+
+
+    <!--======================================= me categories Section  =========================================== -->
+
     <section class="categories" id="categories">
         <div class="container">
             <div class="row  m-auto ">
                 <div class="col-lg-12" align="center">
                     <p class="p">Categories Of Wedding Halls</p>
-
                 </div>
+<!-- -->
+
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
-                        <img src="{{asset('/control/img/img/1.png')}}" class="img-fluid" alt="">
-
+                          <img src="{{asset('/control/img/img/1.png')}}" alt="" class="img-fluid" style="">
+                          <div class="middle">
+                            <div class="text">North Governorate</div>
+                          </div>
                     </div>
                 </div>
+
+
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="portfolio-wrap">
-                                <img src="{{asset('/control/img/img/2.png')}}" class="img-fluid" alt="">
-
+                               <img src="{{asset('/control/img/img/2.png')}}" alt="" class="img-fluid" style="">
+                                  <div class="middlesouth" 
+                                  style="">
+                                    <div class="text">South Governorate</div>
+                                  </div>
                             </div>
                             <div class="portfolio-wrap">
-                                <img src="{{asset('/control/img/img/3.png')}}" class="img-fluid" alt="">
+                                <img src="{{asset('/control/img/img/3.png')}}" alt="" class="img-fluid" style="">
+                                  <div class="middlecenter">
+                                    <div class="text">Central Governorate</div>
+                                  </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
-                        <img src="{{asset('/control/img/img/4.png')}}" class="img-fluid" alt="">
+                       <img src="{{asset('/control/img/img/4.png')}}" alt="" class="img-fluid" style="">
+                          <div class="middle">
+                            <div class="text">Gaza Governorate</div>
+                          </div>
                     </div>
                 </div>
                 <!--<div class="col-lg-4 col-md-6 portfolio-item filter-card">-->
@@ -81,6 +171,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!--======================================= Most booking Section =========================================== -->
 
