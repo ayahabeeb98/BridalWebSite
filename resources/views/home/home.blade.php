@@ -25,7 +25,9 @@ opacity: 1;
   font-size: 16px;
   padding: 16px 32px;
 }
-
+.text a {
+    color: white;
+}
 .middle {
   transition: .5s ease;
   opacity: 0;
@@ -115,7 +117,7 @@ transition: .5s ease;
     </section>
 
 
-    <!--======================================= me categories Section  =========================================== -->
+    <!--======================================= categories Section  =========================================== -->
 
     <section class="categories" id="categories">
         <div class="container">
@@ -129,7 +131,9 @@ transition: .5s ease;
                     <div class="portfolio-wrap">
                           <img src="{{asset('/control/img/img/1.png')}}" alt="" class="img-fluid" style="">
                           <div class="middle">
-                            <div class="text">North Governorate</div>
+                            <div class="text">
+                                <a href="#">North Governorate</a>
+                            </div>
                           </div>
                     </div>
                 </div>
@@ -142,13 +146,15 @@ transition: .5s ease;
                                <img src="{{asset('/control/img/img/2.png')}}" alt="" class="img-fluid" style="">
                                   <div class="middlesouth" 
                                   style="">
-                                    <div class="text">South Governorate</div>
+                                    <div class="text">
+                                       <a href="#">South Governorate</a>    
+                                </div>
                                   </div>
                             </div>
                             <div class="portfolio-wrap">
                                 <img src="{{asset('/control/img/img/3.png')}}" alt="" class="img-fluid" style="">
                                   <div class="middlecenter">
-                                    <div class="text">Central Governorate</div>
+                                    <div class="text"><a href="#">Central Governorate</a> </div>
                                   </div>
                             </div>
                         </div>
@@ -159,7 +165,7 @@ transition: .5s ease;
                     <div class="portfolio-wrap">
                        <img src="{{asset('/control/img/img/4.png')}}" alt="" class="img-fluid" style="">
                           <div class="middle">
-                            <div class="text">Gaza Governorate</div>
+                            <div class="text"><a href="#">Gaza Governorate</a> </div>
                           </div>
                     </div>
                 </div>
