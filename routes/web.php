@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('home.home');
+    return view('hall.index');
 });
+
+Route::get('home', function (){
+   return view('home.home');
+})->name('home');
 
 Route::group(['prefix' => 'hall'], function () {
     Route::get('create', 'managerController@create');

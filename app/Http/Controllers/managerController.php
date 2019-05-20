@@ -45,13 +45,12 @@ class managerController extends Controller
         $direction = public_path('image/');
         $image->move($direction, $imageName);
         $hall = new Hall();
-        $hall->image = "image/" . $imageName;
         $hall->manager_id ='1';
-//        dd(intval($request->category_id));
         $hall->category_id = intval($request->category_id);
 
 //        $hall->manager_id = Auth::user()->id;
         $hall->fill($request->all());
+        $hall->image = "image/" . $imageName;
         $hall->save();
 
         return redirect()->back()->with('success', 'Hall has been saved successfully');
@@ -102,15 +101,15 @@ class managerController extends Controller
                 ->with('error', 'Hall is not found');
         }
 //        $request->validate($this->rules($hall->id), $this->messages());
+
+        $hall->fill($request->all());
+        $hall->category_id = intval($request->category_id);
         if ($request->hasFile('image')) {
             if (File::exists(public_path($hall->image))) {
                 File::delete(public_path($hall->image));
             }
             $hall->image = parent::uploadImage($request->file('image'));
         }
-        $hall->category_id = intval($request->category_id);
-
-        $hall->fill($request->all());
 
         $hall->update();
         return redirect()->route('hall.create')

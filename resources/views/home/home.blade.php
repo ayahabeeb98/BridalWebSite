@@ -42,7 +42,7 @@
         </div>
     </section>
     <!--======================================= categories Section =========================================== -->
-    <section class="categories">
+    <section class="categories" id="categories">
         <div class="container">
             <div class="row  m-auto ">
                 <div class="col-lg-12" align="center">
@@ -207,7 +207,7 @@
     </section>
     <!--======================================= Testimonials Section =========================================== -->
     <!-- Section: Testimonials v.1 -->
-    <section class="text-center pb-5  Testimonials">
+    <section class="text-center pb-5  Testimonials" id="testimonials">
         <!-- Section heading -->
         <p class="p text-center">Testimonials</p>
         <!-- Grid row -->
