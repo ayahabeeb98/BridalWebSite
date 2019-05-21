@@ -1,22 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-//use Illuminate\Http\Request;
-//use App\Http\Controllers\Controller;
+use App\RoomImage;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Room;
 
 class roomController extends Controller
 {
     public function roomData($id)
     {
-        $rooms = Room::findOrFail($id);
-
-        dd($rooms);
-
-        return view('room.rooms' and 'hall.index', compact($rooms));
-
-
+        $rooms = Room::find($id);
+        $roomImage=$rooms->roomImages()->get();
+        return view('room.rooms', compact('rooms','roomImage'
+        ));
     }
+
   //  public function insertDataRoom($id,$name,$tables,$chairs,$price,$earnest,$no_people,$hall_id){
       //  $roome=new Room();
        // dd($roome);
