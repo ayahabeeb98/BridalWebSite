@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Room extends Model
 {
@@ -25,6 +26,13 @@ class Room extends Model
 
     public function hall(){
         return $this->belongsTo('App\Hall');
+    }
+    public function getImage(){
+        if (!$this->image){
+            return asset('no_image.png');}
+        return assert($this->image);
+
+
     }
 
 }

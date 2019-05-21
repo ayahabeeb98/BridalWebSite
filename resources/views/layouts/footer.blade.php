@@ -13,6 +13,9 @@
             </div>
         </div>
         <div class="col-4"></div>
+        @yield('room.rooms')
+
+
     </div>
     <hr style="border-top: 1px solid rgba(255, 234, 234, 0.21);">
     <!-- -->
