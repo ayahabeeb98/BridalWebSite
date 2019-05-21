@@ -1,3 +1,4 @@
+
 @extends('master')
 @section('style')
     <style>
@@ -39,16 +40,12 @@
             }
         }
 
-        .banner {
-            background-image: none;
-            min-height: 0;
-        }
 
         header {
             background-image: linear-gradient(to left, rgba(0,0,0,0.5) ,rgba(0,0,0,0.4) ,  rgba(0,0,0,0.5));
         }
 
-        .navbar-light .navbar-nav .nav-link {
+        /*.navbar-light .navbar-nav .nav-link {
             color: #fff;
         }
     </style>
@@ -64,8 +61,8 @@
                     {{--<img src="{{asset('control/img/line.png')}}" alt="" class="mx-auto d-block mb-2">--}}
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img class="card-img-top" src="{{asset('control/img/5.png')}}" alt="Card image cap">
+                    <div class="card">  @foreach($rooms as $img)
+                            <img src="{{$img->getImage(1)}}" alt="Card image cap"> <img src="{{$img->getImage(2)}}" alt="Card image cap"> @endforeach
                         <div class="card-body text-center">
                             <h5 class="card-title">La Roza wedding hall</h5>
                             <p class="card-text">
@@ -78,15 +75,14 @@
                             <div>
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                             </div>
-                            </p>
                             <a href="#" class="btn btn-danger details-btn">More Details .. </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
-                        <img class="card-img-top" src="{{asset('control/img/6.png')}}" alt="Card image cap">
-                        <div class="card-body text-center">
+                               @foreach($rooms as $img)
+                            <img src="{{$img->getImage(3)}}"  alt="Card image cap"> <img src="{{$img->getImage(4)}}" alt="Card image cap"> @endforeach                        <div class="card-body text-center">
                             <h5 class="card-title">commodore wedding hall</h5>
                             <p class="card-text">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -98,15 +94,14 @@
                             <div>
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                             </div>
-                            </p>
                             <a href="#" class="btn btn-danger details-btn">More Details .. </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
-                        <img class="card-img-top" src="{{asset('control/img/7.png')}}" alt="Card image cap">
-                        <div class="card-body text-center">
+                        @foreach($rooms as $img)
+                            <img src="{{$img->getImage(5)}}" alt="Card image cap"> <img src="{{$img->getImage(6)}}" alt="Card image cap"> @endforeach                        <div class="card-body text-center">
                             <h5 class="card-title">Grand Palace wedding hall</h5>
                             <p class="card-text">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -118,7 +113,6 @@
                             <div>
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            </p>
                             <a href="#" class="btn btn-danger details-btn">More Details .. </a>
                         </div>
                     </div>

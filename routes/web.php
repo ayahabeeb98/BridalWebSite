@@ -14,6 +14,13 @@
 Route::get('/', function () {
     return view('hall.index');
 });
+Route::get('/login',function (){
+    return view('home.login');
+});
+Route::get('/signup',function (){
+    return view('home.signUp');
+});
+
 
 Route::get('home', function (){
    return view('home.home');
@@ -29,6 +36,7 @@ Route::group(['prefix' => 'hall'], function () {
 });
 
 
+Route::get('rooms/{id}','roomController@roomData');
 
 
 //Route::get('create', 'BookController@create');
