@@ -71,19 +71,32 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Log In</h2>
-                    <form method="POST" class="signupform">
+                    <form method="POST" class="signupform mb-4" action="{{ route('login') }}">
+                        @csrf
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="name">
+                            <input class="input--style-3 {{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" placeholder="Email" name="email" value="{{ old('email') }}">
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                            @endif
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3 " type="text" placeholder="Password" name="password">
-                            <!--                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>-->
+                            <input id="password" type="password" class="input--style-3 {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password">
+
+                            @if ($errors->has('password'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                            @endif
                         </div>
 
                         <div class="p-t-10">
                             <button class="btn btn--pill btn--green signupbutton" type="submit">Submit</button>
                         </div>
                     </form>
+                    <hr>
+                    <small>Not a member yet? <a href="{{route('register')}}">Sign up</a></small>
                 </div>
             </div>
         </div>

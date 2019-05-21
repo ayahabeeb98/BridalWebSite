@@ -1,5 +1,16 @@
 @extends('master')
+@section('style')
+    <style>
+        .banner{
+            background-image: none;
+            min-height: 0;
+        }
 
+        header {
+            background-image: linear-gradient(to left, rgba(0,0,0,0.5) ,rgba(0,0,0,0.4) ,  rgba(0,0,0,0.5));
+        }
+    </style>
+@endsection
 @section('body')
 
     <div>

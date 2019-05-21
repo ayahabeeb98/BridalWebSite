@@ -12,20 +12,17 @@ class categoriesSeeder extends Seeder
     public function run()
     {
 
-        DB::table('categories')->insert([
+        $faker = Faker\Factory::create();
+        foreach (range(0,4)as $index){
+            $image = $faker->image(public_path('image'));
+            $image = str_replace(public_path(), '', $image);
+            App\Category::create(
+                [
+                    'location' => $faker->randomElement(['north_governorate','central_governorate','south_governorate','gaza_governorate']),
 
-            'id'=>55,
-            'location'=>'app'
-
-        ]);
-
-
-
-
-
-
-
-
+                ]
+            );
+        }
 
     }
 }

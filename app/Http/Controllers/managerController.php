@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Hall;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
+
 
 class managerController extends Controller
 {
@@ -18,7 +21,9 @@ class managerController extends Controller
      */
     public function index()
     {
-
+        $id = Auth::user()->id;
+        $halls = Hall::where('manager_id', '=', $id)->get();
+        return view('hall.managerHall', compact('halls'));
     }
 
     /**

@@ -11,7 +11,7 @@ class Hall extends Model
 
     public $table = 'halls';
     public $primaryKey = 'id';
-    public $fillable = ['name','address', 'rooms_num' ,'category_id', 'image'];
+    public $fillable = ['name','address', 'rooms_num' ,'category_id', 'image','manager_id'];
     public $dates = ['created_at', 'updated_at', 'deleted_at'];
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';

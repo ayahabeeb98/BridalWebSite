@@ -1,5 +1,3 @@
-
-@yield('room.rooms')
 <!--======================================= Header Section =========================================== -->
 <div class="banner">
 
@@ -30,9 +28,52 @@
                         </li>
 
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <button class="btn btn-secondary signUp" type="submit">Sign Up</button>
-                    </form>
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <button class="btn btn-secondary signUp" type="submit">
+                                        <a href="{{ route('register') }}">
+                                            Sign Up
+                                        </a>
+                                    </button>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-secondary signUp" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @if(Auth::user()->type == 'manager')
+                                        <a class="dropdown-item" href="{{ route('manager.hall')}}">
+                                            My Hall
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('hall.create')}}">
+                                            Add New Hall
+                                        </a>
+                                    @endif
+
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                    {{--<form class="form-inline my-2 my-lg-0">--}}
+                    {{--<button class="btn btn-secondary signUp" type="submit">Sign Up</button>--}}
+                    {{--</form>--}}
                 </div>
 
             </div>

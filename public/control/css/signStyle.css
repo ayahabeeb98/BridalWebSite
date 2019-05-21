@@ -32,13 +32,13 @@ header{
 }
 
 .social:visited {
-    color: #756169;
+    color: rgba(255,255,255,0.7);
 }
 .social:hover {
     color:#E73D89 ;
 }
 nav ul li{
-      margin:0px 15px ;
+      margin:0 15px ;
 
 }
 nav ul li a{
@@ -193,15 +193,3 @@ nav ul li a{
     margin-top: 35px;
 }
 
-@media (max-width: 991px) {
-.booking .card {
-        margin-bottom: 20px;
-    }
-
-}
-
-@media (max-width: 768px) {
-    .booking .card {
-        margin-bottom: 20px;
-    }
-}

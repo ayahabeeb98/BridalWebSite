@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class userSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,11 +18,13 @@ class userSeeder extends Seeder
             App\User::create(
                 [
                     "name"=>$faker->name,
-                    "password"=>$faker->password,
+                    "password"=>\Illuminate\Support\Facades\Hash::make("123456789"),
                     'username'=>$faker->userName,
-                    "phone"=>2,
+                    'email' => $faker->email,
+                    "phone"=>$faker->phoneNumber,
                     "bank_account"=>$faker->isbn10,
                     "image"=>$image,
+                    'type' => $faker->randomElement(['manager','customer']),
 
                 ]
             );

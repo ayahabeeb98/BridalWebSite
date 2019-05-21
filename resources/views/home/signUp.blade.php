@@ -44,21 +44,60 @@
                 <div class="collapse navbar-collapse small" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto  ">
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="{{route('home')}}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Categories</a>
+                            <a class="nav-link" href="{{route('home')}}#categories">Categories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Testimonials</a>
+                            <a class="nav-link" href="{{route('home')}}#testimonials">Testimonials</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <button class="btn btn-secondary signUp" type="submit">Sign Up</button>
-                    </form>
+                    <!-- Right Side Of Navbar -->
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <button class="btn btn-secondary signUp" type="submit">
+                                        <a href="{{ route('register') }}">
+                                            Sign Up
+                                        </a>
+                                    </button>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-secondary signUp" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @if(Auth::user()->type == 'manager')
+                                        <a class="dropdown-item" href="{{ route('manager.hall') }}">
+                                            My Hall
+                                        </a>
+                                    @endif
+
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+
                 </div>
             </div>
         </nav>
@@ -72,30 +111,65 @@
             <div class="card-heading"></div>
             <div class="card-body">
                 <h2 class="title">Registration Info</h2>
-                <form method="POST" class="signupform">
+                <form method="POST" class="signupform mb-4"  action="{{ route('register') }}">
+                    @csrf
                     <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Name" name="name">
+                        <input class="input--style-3 {{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" placeholder="Name" name="name" value="{{ old('name') }}" required>
+                        @if ($errors->has('name'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('name') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3 " type="text" placeholder="Password" name="password">
+                        <input class="input--style-3 {{ $errors->has('userName') ? ' is-invalid' : '' }}" type="text" placeholder="User Name" name="userName" value="{{ old('userName') }}" required>
+                        @if ($errors->has('userName'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('userName') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3 {{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="Password" name="password" required>
                         <!--                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>-->
+                        @if ($errors->has('password'))
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                        @endif
                     </div>
                     <div class="input-group">
                         <div class="rs-select2 js-select-simple select--no-search">
-                            <input class="input--style-3" type="text" placeholder="Bank Account" name="bank">
-
+                            <input class="input--style-3 {{ $errors->has('bank_account') ? ' is-invalid' : '' }}" type="text" placeholder="Bank Account" name="bank_account" value="{{ old('bank_account') }}" required>
+                            @if ($errors->has('password'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                            @endif
                         </div>
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3" type="email" placeholder="Email" name="email">
+                        <input class="input--style-3 {{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" placeholder="Email"  name="email" value="{{ old('email') }}" required>
+                        @if ($errors->has('email'))
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                        @endif
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Phone" name="phone">
+                        <input class="input--style-3 {{ $errors->has('phone') ? ' is-invalid' : '' }}" type="text" placeholder="Phone" name="phone" value="{{ old('phone') }}" required>
+                        @if ($errors->has('email'))
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                        @endif
                     </div>
                     <div class="p-t-10">
                         <button class="btn btn--pill btn--green signupbutton" type="submit">Submit</button>
                     </div>
                 </form>
+                <hr>
+                <small>Already have an account? <a href="{{route('login')}}">LogIn</a></small>
             </div>
         </div>
     </div>

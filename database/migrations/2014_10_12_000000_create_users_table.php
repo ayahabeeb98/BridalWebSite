@@ -18,11 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('userName')->unique();
             $table->string('email')->unique();
-            $table->integer('phone')->unique();
-            $table->integer('bank_account')->unique();
-            $table->string('image');
+            $table->string('phone')->unique();
+            $table->string('bank_account')->unique();
+            $table->string('image')->nullable();
             $table->string('password');
-            $table->enum('type', ['manager', 'customer']);
+            $table->enum('type', ['manager', 'customer'])->default('customer');
             $table->rememberToken();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
