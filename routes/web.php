@@ -37,6 +37,10 @@ Route::group(['prefix' => 'hall'], function () {
 
 
 Route::get('rooms/{id}','roomController@roomData');
+Route::get('room/{id}','roomController@getImage');
+
+
+
 
 
 //Route::get('create', 'BookController@create');
