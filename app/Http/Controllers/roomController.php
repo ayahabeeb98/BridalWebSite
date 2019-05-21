@@ -11,6 +11,7 @@ class roomController extends Controller
     public function roomData($id)
     {
         $rooms = Room::find($id);
+//        dd($rooms->name);
         $roomImage=$rooms->roomImages()->get();
         return view('room.rooms', compact('rooms','roomImage'
         ));
