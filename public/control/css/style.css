@@ -251,3 +251,7 @@ nav ul li a{
 .signup input::placeholder {
     color: #B4B4B4;
 }
+
+.error{
+    color: red;
+}
