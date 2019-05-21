@@ -87,7 +87,7 @@ class managerController extends Controller
             return view('hall.edit', compact('hall'));
         } catch (\Exception $exception) {
             return redirect()->route('hall.create')
-                ->with('error', 'book is not found');
+                ->with('error', 'hall is not found');
         }
     }
 

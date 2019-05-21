@@ -23,6 +23,14 @@ Route::group(['prefix' => 'manager'], function () {
 //    Route::get('destroy/{id}', ['as' => 'hall.destroy', 'uses' => 'managerController@destroy']);
     Route::get('edit/{id}', ['as' => 'hall.edit', 'uses' => 'managerController@edit']);
     Route::put('update/{id}', ['as' => 'hall.update', 'uses' => 'managerController@update']);
+
+
+// me
+    Route::get('create_room', 'ManagerRoomController@create');
+    Route::post('create_room', ['as' => 'room.create', 'uses' => 'ManagerRoomController@store']);
+
+    Route::get('edit_room/{id}', ['as' => 'room.edit', 'uses' => 'ManagerRoomController@edit']);
+    Route::put('update_room/{id}', ['as' => 'room.update', 'uses' => 'ManagerRoomController@update']);
 });
 
 
