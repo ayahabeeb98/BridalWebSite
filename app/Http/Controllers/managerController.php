@@ -49,6 +49,7 @@ class managerController extends Controller
         $hall->category_id = intval($request->category_id);
 
 //        $hall->manager_id = Auth::user()->id;
+//        dd($request->all());
         $hall->fill($request->all());
         $hall->image = "image/" . $imageName;
         $hall->save();
@@ -134,7 +135,8 @@ class managerController extends Controller
         $rules = [
             'name' => 'required',
             'rooms_num' => 'required',
-            'category_id' => 'required',
+//            'category_id' => 'required',
+            'address' => 'required',
 
         ];
         if ($id) {
@@ -157,6 +159,8 @@ class managerController extends Controller
         return [
             'name.required' => 'Name is required',
             'rooms_num.required' => 'Number of room  is required',
+            'address.required' => 'Address  is required',
+
             'image.required' => 'Hall image is required',
             'image.mimes' => 'invalid image',
         ];

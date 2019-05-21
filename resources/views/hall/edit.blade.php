@@ -24,6 +24,15 @@
             <span class="error col-md-12">{{$errors->first('rooms_num')}}</span>
 
         </div>
+
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Address</label>
+            <input type="text" class="form-control" id="inputPassword4" placeholder="Address" name="address"  value="{{$hall->address}}">
+            <span class="error col-md-12">{{$errors->first('address')}}</span>
+
+
+        </div>
+
         <div class="form-group col-md-6">
             <img src="{{asset($hall->getImage())}}" alt="">
             <label for="image">Image</label>

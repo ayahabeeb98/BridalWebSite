@@ -26,7 +26,7 @@ Route::get('home', function (){
    return view('home.home');
 })->name('home');
 
-Route::group(['prefix' => 'hall'], function () {
+Route::group(['prefix' => 'manager'], function () {
     Route::get('create', 'managerController@create');
     Route::post('create', ['as' => 'hall.create', 'uses' => 'managerController@store']);
 //    Route::get('/all', ['as' => 'hall.index', 'uses' => 'hallController@index']);
@@ -34,6 +34,12 @@ Route::group(['prefix' => 'hall'], function () {
     Route::get('edit/{id}', ['as' => 'hall.edit', 'uses' => 'managerController@edit']);
     Route::put('update/{id}', ['as' => 'hall.update', 'uses' => 'managerController@update']);
 });
+
+
+
+    Route::get('/all/{category_id?}', ['as' => 'hall.index', 'uses' => 'HallController@index']);
+
+
 
 
 Route::get('rooms/{id}','roomController@roomData');
