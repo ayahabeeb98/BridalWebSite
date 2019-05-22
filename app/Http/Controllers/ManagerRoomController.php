@@ -53,7 +53,7 @@ class ManagerRoomController extends Controller
        // $room->hall_id = intval($request->hall_id);
 
         $room->save();
-        return redirect()->back()->with('success', 'Hall has been saved successfully');
+        return redirect()->back()->with('success', 'Room has been saved successfully');
 
     }
 
@@ -158,11 +158,11 @@ class ManagerRoomController extends Controller
     {
         return [
             'name.required' =>   'Name is required',
-            'tables.required' => 'Number of tables is required',
-            'chairs.required' => 'Number of chairs is required',
+            'tables.required' => 'no.tables is required',
+            'chairs.required' => 'no.chairs is required',
             'price.required' => 'Price is required',
             'earnest.required' => 'earnest is required',
-            'no_people' => 'number of people is required',
+            'no_people' => 'no.people is required',
            // 'image.required' => 'Hall image is required',
            // 'image.mimes' => 'invalid image',
         ];
