@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Bridal | Add New Hall</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -55,8 +55,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('home')}}#testimonials">Testimonials</a>
                         </li>
+
                     </ul>
-                    <!-- Right Side Of Navbar -->
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -78,8 +78,16 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @if(Auth::user()->type == 'manager')
-                                        <a class="dropdown-item" href="{{ route('manager.hall') }}">
+                                        <a class="dropdown-item" href="{{ route('manager.hall')}}">
                                             My Hall
+                                        </a>
+
+                                        <a class="dropdown-item" href="{{ route('hall.create')}}">
+                                            Add New Hall
+                                        </a>
+
+                                        <a class="dropdown-item" href="{{ route('room.create')}}">
+                                            Add New Room
                                         </a>
                                     @endif
 
@@ -97,7 +105,6 @@
                             </li>
                         @endguest
                     </ul>
-
                 </div>
             </div>
         </nav>

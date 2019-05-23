@@ -22,6 +22,7 @@ class CreateRoomsTable extends Migration
             $table->Integer('earnest')->unsigned();
             $table->Integer('no_people')->unsigned();
             $table->integer('hall_id')->unsigned();
+            $table->string('image');
             $table->foreign('hall_id')->references('id')->on('halls');
             $table->timestamps();
             $table->softDeletes();

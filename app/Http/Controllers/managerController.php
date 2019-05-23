@@ -23,7 +23,11 @@ class managerController extends Controller
     {
         $id = Auth::user()->id;
         $halls = Hall::where('manager_id', '=', $id)->get();
-        return view('hall.managerHall', compact('halls'));
+        $hallsNum = $halls->toArray();
+        $msg = '';
+        if (count($hallsNum) == 0)
+            $msg = 'You Don\'t Have Any Hall';
+        return view('hall.managerHall', compact('halls','msg'));
     }
 
     /**
@@ -50,11 +54,8 @@ class managerController extends Controller
         $direction = public_path('image/');
         $image->move($direction, $imageName);
         $hall = new Hall();
-        $hall->manager_id ='1';
+        $hall->manager_id =Auth::user()->id;
         $hall->category_id = intval($request->category_id);
-
-//        $hall->manager_id = Auth::user()->id;
-//        dd($request->all());
         $hall->fill($request->all());
         $hall->image = "image/" . $imageName;
         $hall->save();
@@ -86,7 +87,7 @@ class managerController extends Controller
             $hall = Hall::findOrFail($id);
             return view('hall.edit', compact('hall'));
         } catch (\Exception $exception) {
-            return redirect()->route('hall.create')
+            return redirect()->route('manager.hall')
                 ->with('error', 'hall is not found');
         }
     }
@@ -103,7 +104,7 @@ class managerController extends Controller
         try {
             $hall = Hall::findOrFail($id);
         } catch (ModelNotFoundException $exception) {
-            return redirect()->route('hall.create')
+            return redirect()->route('manager.hall')
                 ->with('error', 'Hall is not found');
         }
         $request->validate($this->rules($hall->id), $this->messages());
@@ -118,7 +119,7 @@ class managerController extends Controller
         }
 
         $hall->update();
-        return redirect()->route('hall.create')
+        return redirect()->route('manager.hall')
             ->with('success', 'hall ' . $hall->name . 'Hall has been updated successfully');
     }
 
@@ -130,7 +131,13 @@ class managerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            $hall = Hall::findOrFail($id);
+            $hall->delete(); //hard delete
+            return redirect()->back()->with('success', 'Hall ' . $hall->title . ' has been deleted successfully');
+        } catch (ModelNotFoundException $exception) {
+            return redirect()->back()->with('error', 'Hall is not existed');
+        }
     }
 
 

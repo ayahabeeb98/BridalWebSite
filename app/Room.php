@@ -11,7 +11,7 @@ class Room extends Model
 
     public $table = 'rooms';
     public $primaryKey = 'id';
-    public $fillable = ['name', 'tables', 'chairs', 'price', 'earnest', 'no_people'];
+    public $fillable = ['name', 'tables', 'chairs', 'price', 'earnest', 'no_people','image'];
     public $dates = ['created_at', 'updated_at', 'deleted_at'];
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -27,12 +27,11 @@ class Room extends Model
     public function hall(){
         return $this->belongsTo('App\Hall');
     }
-    public function getImage(){
-        if (!$this->image){
-            return asset('no_image.png');}
-        return assert($this->image);
-
-
+    public function getImage()
+    {
+        if (!$this->image)
+            return asset('no_image.png');
+        return asset($this->image);
     }
 
 }

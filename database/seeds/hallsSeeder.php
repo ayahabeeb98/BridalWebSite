@@ -13,8 +13,9 @@ class hallsSeeder extends Seeder
     {
         $faker = Faker\Factory::create(); // factory pattern // hide creation operations
         foreach (range(0, 10) as $index) {
-            $image = $faker->image(public_path('image'));
+            $image = $faker->image(public_path('/image/'));
             $image = str_replace(public_path(), '', $image);
+            dd($image);
             \App\Hall::create([
                 'name' => $faker->name,
                 'address' => $faker->address,

@@ -20,7 +20,7 @@ class HallController extends Controller
             $categories = Category::find($category_id);
 
             $halls = $categories->halls()->get();
-            return view('hall.index', compact('halls'));
+            return view('hall.index', compact('halls','categories'));
         }
 
 

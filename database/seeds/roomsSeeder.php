@@ -13,8 +13,10 @@ class roomsSeeder extends Seeder
         foreach (range(0, 10) as $index) {
             $image = $faker->image(public_path('image'));
             $image = str_replace(public_path(), '', $image);
+
             \App\Room::create([
                 'name' => $faker->name,
+                'image' => $image,
                 'tables' => $faker->numberBetween(1,20),
                 'chairs' => $faker->numberBetween(1,30),
                 'price' => $faker->numberBetween(50,130),

@@ -43,6 +43,11 @@
         header {
             background-image: linear-gradient(to left, rgba(0,0,0,0.5) ,rgba(0,0,0,0.4) ,  rgba(0,0,0,0.5));
         }
+
+        .banner::before {
+            content: none;
+        }
+
     </style>
 
 @endsection
@@ -51,12 +56,14 @@
     <section class="halls mb-5">
         <div class="container">
             <div class="row mt-5">
-                <div class="col-lg-12 text-center">
-                    <h2>Gaza Government Wedding Halls</h2>
+                <div  class="mx-auto text-center" style="width: 70%;">
+                    <h2>{{$categories->name}} Government Wedding Halls</h2>
                     <img src="{{asset('control/img/line.png')}}" alt="" class="mx-auto d-block mb-2">
                 </div>
+
+
                 @foreach($halls as $hall)
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card">
                         <div class="image">
                             <img class="card-img-top" src="{{asset($hall->getImage())}}" alt="Card image cap">
@@ -74,7 +81,7 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                             </div>
                             </p>
-                            <a href="#" class="btn btn-danger details-btn">More Details .. </a>
+                            <a href="{{route('room.index' , ['hall' => $hall->id])}}" class="btn btn-danger details-btn">More Details .. </a>
                         </div>
                     </div>
                 </div>

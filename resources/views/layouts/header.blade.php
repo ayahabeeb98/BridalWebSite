@@ -52,8 +52,13 @@
                                         <a class="dropdown-item" href="{{ route('manager.hall')}}">
                                             My Hall
                                         </a>
+
                                         <a class="dropdown-item" href="{{ route('hall.create')}}">
                                             Add New Hall
+                                        </a>
+
+                                        <a class="dropdown-item" href="{{ route('room.create')}}">
+                                            Add New Room
                                         </a>
                                     @endif
 

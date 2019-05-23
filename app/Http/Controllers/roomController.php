@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Hall;
 use App\RoomImage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -8,10 +9,18 @@ use App\Room;
 
 class roomController extends Controller
 {
+
+    public function index($hall){
+        $halls = Hall::find($hall);
+
+        $rooms = $halls->rooms()->get();
+//        dd($rooms)
+        return view('room.index', compact('rooms','halls'));
+    }
+
     public function roomData($id)
     {
         $rooms = Room::find($id);
-//        dd($rooms->name);
         $roomImage=$rooms->roomImages()->get();
         return view('room.rooms', compact('rooms','roomImage'
         ));

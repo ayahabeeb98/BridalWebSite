@@ -11,47 +11,39 @@
 |
 */
 
-Route::get('/', function () {
-    return view('room.index');
-});
 
-
-Route::group(['prefix' => 'manager'], function () {
-    Route::get('create', 'managerController@create');
-    Route::post('create', ['as' => 'hall.create', 'uses' => 'managerController@store']);
+Route::group(['prefix' => 'manager' , 'middleware' =>'App\Http\Middleware\CheckManager'], function () {
+    //For Halls
+    Route::get('create/hall', 'managerController@create');
+    Route::post('create/hall', ['as' => 'hall.create', 'uses' => 'managerController@store']);
     Route::get('/halls', ['as' => 'manager.hall', 'uses' => 'managerController@index']);
-//    Route::get('destroy/{id}', ['as' => 'hall.destroy', 'uses' => 'managerController@destroy']);
-    Route::get('edit/{id}', ['as' => 'hall.edit', 'uses' => 'managerController@edit']);
-    Route::put('update/{id}', ['as' => 'hall.update', 'uses' => 'managerController@update']);
+    Route::get('destroy/hall/{id}', ['as' => 'hall.destroy', 'uses' => 'managerController@destroy']);
+    Route::get('edit/hall/{id}', ['as' => 'hall.edit', 'uses' => 'managerController@edit']);
+    Route::put('update/hall/{id}', ['as' => 'hall.update', 'uses' => 'managerController@update']);
 
 
-// me
-    Route::get('create_room', 'ManagerRoomController@create');
-    Route::post('create_room', ['as' => 'room.create', 'uses' => 'ManagerRoomController@store']);
+// For Rooms
+    Route::get('create/room', 'ManagerRoomController@create');
+    Route::post('create/room', ['as' => 'room.create', 'uses' => 'ManagerRoomController@store']);
 
-    Route::get('edit_room/{id}', ['as' => 'room.edit', 'uses' => 'ManagerRoomController@edit']);
-    Route::put('update_room/{id}', ['as' => 'room.update', 'uses' => 'ManagerRoomController@update']);
+    Route::get('edit/room/{id}', ['as' => 'room.edit', 'uses' => 'ManagerRoomController@edit']);
+    Route::put('update/room/{id}', ['as' => 'room.update', 'uses' => 'ManagerRoomController@update']);
 });
 
 
 
-    Route::get('/all/{category_id?}', ['as' => 'hall.index', 'uses' => 'HallController@index']);
+Route::get('/all/{category_id?}', ['as' => 'hall.index', 'uses' => 'HallController@index']);
+Route::get('rooms/all/{hall}',['as' => 'room.index', 'uses' => 'roomController@index']);
 
 
+Route::get('rooms/{id}','roomController@roomData')->name('room.details');
+//Route::get('room/{id}','roomController@getImage');
 
 
-Route::get('rooms/{id}','roomController@roomData');
-Route::get('room/{id}','roomController@getImage');
-
-
-
-
-
-
-
-//Route::get('create', 'BookController@create');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', function (){
+    return view('home.home');
+})->name('home');
 

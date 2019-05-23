@@ -15,6 +15,7 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
+            $table->enum('name',['Gaza','North','South','Central']);
             $table->enum('location',['north_governorate','central_governorate','south_governorate','gaza_governorate']);
             $table->softDeletes();
             $table->timestamps();

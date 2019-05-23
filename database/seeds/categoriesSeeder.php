@@ -11,18 +11,29 @@ class categoriesSeeder extends Seeder
      */
     public function run()
     {
+        App\Category::create(
+            array('name' => 'Gaza',
+                'location' => 'gaza_governorate')
 
-        $faker = Faker\Factory::create();
-        foreach (range(0,4)as $index){
-            $image = $faker->image(public_path('image'));
-            $image = str_replace(public_path(), '', $image);
-            App\Category::create(
-                [
-                    'location' => $faker->randomElement(['north_governorate','central_governorate','south_governorate','gaza_governorate']),
+        );
 
-                ]
-            );
-        }
+        App\Category::create(
+            array('name' => 'North',
+                'location' => 'north_governorate')
+
+        );
+
+        App\Category::create(
+            array('name' => 'South',
+                'location' => 'south_governorate')
+
+        );
+
+        App\Category::create(
+            array('name' => 'Central',
+                'location' => 'central_governorate')
+
+        );
 
     }
 }
