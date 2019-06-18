@@ -112,23 +112,20 @@
                     <h2 class="title">Log In</h2>
                     <form method="POST" class="signupform mb-4" action="{{ route('login') }}">
                         @csrf
+
                         <div class="input-group">
-                            <input class="input--style-3 {{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" placeholder="Email" name="email" value="{{ old('email') }}">
                             @if ($errors->has('email'))
                                 <br>
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                <strong class="alert-danger border" style="font-size: small;">{{ $errors->first('email') }}</strong> <br>
                             @endif
+                            <input class="input--style-3 {{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" placeholder="Email" name="email" value="{{ old('email') }}">
                         </div>
                         <div class="input-group">
-                            <input id="password" type="password" class="input--style-3 {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password">
-
                             @if ($errors->has('password'))
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                <strong class="alert-danger border" style="font-size: small;">{{ $errors->first('password') }}</strong>
                             @endif
+
+                            <input id="password" type="password" class="input--style-3 {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password">
                         </div>
 
                         <div class="p-t-10">

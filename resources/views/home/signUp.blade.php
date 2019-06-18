@@ -114,55 +114,42 @@
                 <form method="POST" class="signupform mb-4"  action="{{ route('register') }}">
                     @csrf
                     <div class="input-group">
-                        <input class="input--style-3 {{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" placeholder="Name" name="name" value="{{ old('name') }}" required>
                         @if ($errors->has('name'))
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('name') }}</strong>
-                            </span>
+                            <strong class="alert-danger border" style="font-size: small;">{{ $errors->first('name') }}</strong>
                         @endif
+                        <input class="input--style-3 {{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" placeholder="Name" name="name" value="{{ old('name') }}" required>
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3 {{ $errors->has('userName') ? ' is-invalid' : '' }}" type="text" placeholder="User Name" name="userName" value="{{ old('userName') }}" required>
                         @if ($errors->has('userName'))
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('userName') }}</strong>
-                            </span>
+                            <strong class="alert-danger border" style="font-size: small;">{{ $errors->first('userName') }}</strong>
                         @endif
+                        <input class="input--style-3 {{ $errors->has('userName') ? ' is-invalid' : '' }}" type="text" placeholder="User Name" name="userName" value="{{ old('userName') }}" required>
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3 {{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="Password" name="password" required>
-                        <!--                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>-->
                         @if ($errors->has('password'))
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                            <strong class="alert-danger border" style="font-size: small;">{{ $errors->first('password') }}</strong>
                         @endif
+                        <input class="input--style-3 {{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="Password" name="password" required>
                     </div>
                     <div class="input-group">
                         <div class="rs-select2 js-select-simple select--no-search">
-                            <input class="input--style-3 {{ $errors->has('bank_account') ? ' is-invalid' : '' }}" type="text" placeholder="Bank Account" name="bank_account" value="{{ old('bank_account') }}" required>
-                            @if ($errors->has('password'))
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                            @if ($errors->has('bank_account'))
+                                <strong class="alert-danger border" style="font-size: small;">{{ $errors->first('bank_account') }}</strong>
                             @endif
+                                <input class="input--style-3 {{ $errors->has('bank_account') ? ' is-invalid' : '' }}" type="text" placeholder="Bank Account" name="bank_account" value="{{ old('bank_account') }}" required>
                         </div>
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3 {{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" placeholder="Email"  name="email" value="{{ old('email') }}" required>
                         @if ($errors->has('email'))
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                            <strong class="alert-danger border" style="font-size: small;">{{ $errors->first('email') }}</strong>
                         @endif
+                            <input class="input--style-3 {{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" placeholder="Email"  name="email" value="{{ old('email') }}" required>
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3 {{ $errors->has('phone') ? ' is-invalid' : '' }}" type="text" placeholder="Phone" name="phone" value="{{ old('phone') }}" required>
-                        @if ($errors->has('email'))
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('phone') }}</strong>
-                                    </span>
+                        @if ($errors->has('phone'))
+                            <strong class="alert-danger border" style="font-size: small;">{{ $errors->first('phone') }}</strong>
                         @endif
+                        <input class="input--style-3 {{ $errors->has('phone') ? ' is-invalid' : '' }}" type="text" placeholder="Phone" name="phone" value="{{ old('phone') }}" required>
                     </div>
                     <div class="p-t-10">
                         <button class="btn btn--pill btn--green signupbutton" type="submit">Submit</button>
