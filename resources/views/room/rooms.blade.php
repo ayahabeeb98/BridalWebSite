@@ -18,7 +18,7 @@
     </section><br>
         <div class="mx-auto text-center" style="width: 30% ; background-color: grey ;
         border-radius: 5px; align-content: center; margin:auto ;color: white">
-           <img src="{{asset('control/img/1.png')}}" alt="room img" >
+           <img src="{{asset($rooms->getImage()}}" alt="room img" >
            <p>Name : {{$rooms->name}}</p>
             <p>Price : {{$rooms->price}}</p>
             <p>Table : {{$rooms->table}}</p>
