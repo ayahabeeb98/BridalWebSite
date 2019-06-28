@@ -23,6 +23,7 @@ Route::group(['prefix' => 'manager' , 'middleware' =>'App\Http\Middleware\CheckM
 
 
 // For Rooms
+
     Route::get('create/room', 'ManagerRoomController@create');
     Route::post('create/room', ['as' => 'room.create', 'uses' => 'ManagerRoomController@store']);
 
@@ -46,4 +47,4 @@ Auth::routes();
 Route::get('/', function (){
     return view('home.home');
 })->name('home');
-
+//

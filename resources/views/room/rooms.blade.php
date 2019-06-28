@@ -16,25 +16,15 @@
         <a class="next hidden-xs" href="#main-slider" data-slide="next"><i class="fa fa-chevron-right"></i> </a>
 
     </section><br>
-        <div style="width: 30%;text-align: center ; background-color: grey ; border-radius: 5px; align-content: center; margin:auto ;color: white">
-
+        <div class="mx-auto text-center" style="width: 30% ; background-color: grey ;
+        border-radius: 5px; align-content: center; margin:auto ;color: white">
+           <img src="{{asset('control/img/1.png')}}" alt="room img" >
            <p>Name : {{$rooms->name}}</p>
             <p>Price : {{$rooms->price}}</p>
             <p>Table : {{$rooms->table}}</p>
             <p>Chairs : {{$rooms->chairs}}</p>
             <p>Earnest : {{$rooms->earnest}}</p>
             <p>Number of people : {{$rooms->no_people}}</p>
-
-
-
-
-
-
-
-
-
-
-
         </div>
 
 
