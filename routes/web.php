@@ -29,6 +29,9 @@ Route::group(['prefix' => 'manager' , 'middleware' =>'App\Http\Middleware\CheckM
 
     Route::get('edit/room/{id}', ['as' => 'room.edit', 'uses' => 'ManagerRoomController@edit']);
     Route::put('update/room/{id}', ['as' => 'room.update', 'uses' => 'ManagerRoomController@update']);
+    Route::get('events','CalenderController@index')->name('events.index');
+    Route::post('events','CalenderController@addEvent')->name('events.add');
+
 });
 
 

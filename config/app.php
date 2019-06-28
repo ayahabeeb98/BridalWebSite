@@ -176,7 +176,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-       // MaddHatter\LaravelFullcalnder\ServiceProvider::class,
+        MaddHatter\LaravelFullcalndar\ServiceProvider::class,
 
 
     ],
@@ -229,7 +229,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-       // 'Calender' =>MaddHatter\LaravelFullcalnder\Facades\Calender::class,
+        'Calendar' =>MaddHatter\LaravelFullcalnder\Facades\Calendar::class,
 
 
     ],
